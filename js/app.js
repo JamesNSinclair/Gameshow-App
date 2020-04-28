@@ -21,7 +21,6 @@ let missed = 0;
 function getRandomPhraseAsArray(arr) {
  let randomPhrase = arr[Math.floor(Math.random()*arr.length)];
  const chars = randomPhrase.split('');
-console.log(chars);
  return chars;
 
 };
@@ -84,8 +83,7 @@ keyboard.addEventListener("click", (event) => {
                 break;
               }
                         missed+=1;
-                  console.log(missed);
-}
+                }
 
               //CHECK WIN
 
@@ -93,7 +91,6 @@ keyboard.addEventListener("click", (event) => {
                 let unsolved = document.querySelectorAll('.show').length;
                   let solved = document.querySelectorAll('.letter').length;
                         if (unsolved === solved) {
-                  console.log("you win");
                   overlay.style.zIndex = '5';
                   overlay.style.visibility = 'visible';
                   document.querySelector("#overlay").classList.add("win");
